@@ -17,3 +17,16 @@ li {
 .form-group {
   margin-bottom: 5px;
 }
+
+h1{
+  text-align: center;
+}
+
+.burgers{
+  font-weight: bolder;
+}
+
+.bottom-stuff{
+  text-align: center;
+  font-weight: bolder;
+}

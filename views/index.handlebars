@@ -1,24 +1,43 @@
 <h1>Burgerville!</h1>
 
-<h2>Burgers needed to Eat!</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
+
+<div class="container">
+  <div class = "row">
+
+
+  <div class="col-4 burgers">
+
+    <h2>Burgers needed to Eat!</h2>
+    <ul>
+      {{#each burgers}}
+      {{#unless devoured}}
       {{> burger/burger-block devoured=false}}
-    {{/unless}}
-  {{/each}}
-</ul>
+      {{/unless}}
+      {{/each}}
+    </ul>
 
-<h2>Burgers that are eaten!</h2>
+  </div>
+  <div class="col-4">
+    <img class="image float-left mx-2 rounded img-fluid" src="public\assets\img\burger.jpg" alt="Responsive Image">
+  </div>
+  <div class="col-4 burgers">
 
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
+    <h2>Burgers that are eaten!</h2>
+
+    <ul>
+      {{#each burgers}}
+      {{#if devoured}}
       {{> burger/burger-block}}
-    {{/if}}
-  {{/each}}
-</ul>
+      {{/if}}
+      {{/each}}
+    </ul>
+
+  </div>
+  </div>
+</div>
+
+<div class ="bottom-stuff">
 
 <h2>Add a Burger</h2>
 <form class="create-form">
@@ -31,4 +50,5 @@
 
 
   <button type="submit">Add Burger</button>
+</div>
 </form>
